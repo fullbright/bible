@@ -1,0 +1,151 @@
+\documentclass[
+  twoside,
+%  draft,
+  ]{bible}
+
+\typesettrue
+
+\usepackage{metalogo} % For Xe(La)TeX Logos
+
+\usepackage{microtype}
+
+\def\today{July 29, 2018}
+\title{La SainteBible}
+
+\renewcommand{\thefootnote}{\alph{footnote}}
+
+\def\usecs#1{\csname#1\endcsname}
+
+\setlength{\parindent}{1em}
+
+\SetVersion{bible_fra}
+\begin{document}
+\NewSpeaker{\Father}{blue}{blue!50!black}
+\NewSpeaker{\Son}{red}{red!50!black}
+
+\input{hyphenations}
+
+%\input{notes}
+
+\null\vfil
+\centerline{This is a part of multi-lingual corpus of the bible.}
+\vfil
+%\testbook{old/genesis}
+
+\clearpage
+
+\onecolumn
+\thispagestyle{empty}
+\null\vfil
+\centerline{\Large L'ancien testament}
+\vfil
+\twocolumn
+
+
+%\usecs{note genesis 1:1}
+%\usecs{note genesis 1:2}
+%\usecs{note genesis 3:16}
+%\usecs{note exodus 1:1}
+
+%\Huge
+
+\inputbook{1CH}
+\inputbook{1CO}
+\inputbook{1JO}
+\inputbook{1KI}
+\inputbook{1PE}
+\inputbook{1SA}
+\inputbook{1TH}
+\inputbook{1TI}
+\inputbook{2CH}
+\inputbook{2CO}
+\inputbook{2JO}
+\inputbook{2KI}
+\inputbook{2PE}
+\inputbook{2SA}
+\inputbook{2TH}
+\inputbook{2TI}
+\inputbook{3JO}
+\inputbook{ACT}
+\inputbook{AMO}
+\inputbook{COL}
+\inputbook{DAN}
+\inputbook{DEU}
+\inputbook{ECC}
+\inputbook{EPH}
+\inputbook{EST}
+\inputbook{EXO}
+\inputbook{EZE}
+\inputbook{EZR}
+\inputbook{GAL}
+\inputbook{GEN}
+\inputbook{HAB}
+\inputbook{HAG}
+\inputbook{HEB}
+\inputbook{HOS}
+\inputbook{ISA}
+\inputbook{JAM}
+\inputbook{JDG}
+\inputbook{JER}
+\inputbook{JOB}
+\inputbook{JOE}
+\inputbook{JOH}
+\inputbook{JON}
+\inputbook{JOS}
+\inputbook{JUD}
+\inputbook{LAM}
+\inputbook{LEV}
+\inputbook{LUK}
+\inputbook{MAL}
+\inputbook{MAR}
+\inputbook{MAT}
+
+
+\onecolumn
+\thispagestyle{empty}
+\null\vfil
+\centerline{\Large Le nouveau testament}
+\vfil
+\twocolumn
+
+\inputbook{MIC}
+\inputbook{NAH}
+\inputbook{NEH}
+\inputbook{NUM}
+\inputbook{OBA}
+\inputbook{PHI}
+\inputbook{PHM}
+\inputbook{PRO}
+\inputbook{PSA}
+\inputbook{REV}
+\inputbook{ROM}
+\inputbook{RUT}
+\inputbook{SON}
+\inputbook{TIT}
+\inputbook{ZEC}
+\inputbook{ZEP}
+
+
+\backmatter\onecolumn
+% Need to make single column
+\include{\bibleversion/license-page}
+
+% colophon
+
+\newgeometry{centering,width=4in}
+
+\thispagestyle{empty}
+\null\vfil\noindent
+This King~James~Bible was typeset by \XeTeX\ (using the \XeLaTeX\ format) in
+6.64~seconds on a single thread of an Intel~\mbox{i7-3770K} running at
+$3.50\,\mathrm{GHz}$.  \XeLaTeX\ is based upon the original \TeX\
+typesetting system by Dr.~Donald~E.~Knuth and its extensions (\LaTeX)
+written by Leslie~Lamport.
+\vfil\vfil
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: default
+%%% End:
