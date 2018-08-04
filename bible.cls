@@ -88,7 +88,7 @@
   % If this is the first verse, don't typeset its little index
   \bool_if:cTF{is_first_verse}
     {\bool_set_false:c{is_first_verse}}
-    {\textsuperscript{\color{black}\arabic{verse}}}
+    {\textsuperscript{\color{magenta}\arabic{verse}}}
     \noindent
   }
 
