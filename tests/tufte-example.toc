@@ -1,0 +1,31 @@
+\contentsline {section}{Typefaces}{10}{section*.1}
+\contentsline {section}{Headings}{13}{section*.2}
+\contentsline {paragraph}{Paragraph}{13}{paragraph*.3}
+\contentsline {section}{Environments}{13}{section*.4}
+\contentsline {section}{Page Layout}{14}{section*.5}
+\contentsline {subsection}{Headings}{14}{subsection*.6}
+\contentsline {section}{Sidenotes}{14}{section*.7}
+\contentsline {section}{References}{15}{section*.8}
+\contentsline {section}{Figures and Tables}{15}{section*.9}
+\contentsline {section}{Captions}{18}{section*.10}
+\contentsline {paragraph}{Vertical alignment}{18}{paragraph*.11}
+\contentsline {paragraph}{Horizontal alignment}{19}{paragraph*.12}
+\contentsline {section}{Full-width text blocks}{19}{section*.13}
+\contentsline {section}{Typography}{19}{section*.14}
+\contentsline {subsection}{Typefaces}{19}{subsection*.15}
+\contentsline {subsection}{Letterspacing}{20}{subsection*.16}
+\contentsline {section}{Document Class Options}{20}{section*.17}
+\contentsline {section}{File Hooks}{21}{section*.18}
+\contentsline {section}{Numbered Section Headings}{22}{section*.19}
+\contentsline {section}{Changing the Paper Size}{22}{section*.20}
+\contentsline {section}{Customizing Marginal Material}{22}{section*.21}
+\contentsline {section}{Converting from \texttt {article} to \texttt {tufte-handout}}{24}{section*.22}
+\contentsline {section}{Converting from \texttt {book} to \texttt {tufte-book}}{24}{section*.23}
+\contentsline {section}{Tufte-\LaTeX \xspace Website}{24}{section*.24}
+\contentsline {section}{Tufte-\LaTeX \xspace Mailing Lists}{24}{section*.25}
+\contentsline {paragraph}{Discussion list}{24}{paragraph*.26}
+\contentsline {paragraph}{Commits list}{24}{paragraph*.27}
+\contentsline {section}{Getting Help}{25}{section*.28}
+\contentsline {section}{Errors, Warnings, and Informational Messages}{25}{section*.29}
+\contentsline {section}{Package Dependencies}{26}{section*.30}
+\contentsfinish 

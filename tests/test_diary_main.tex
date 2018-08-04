@@ -1,0 +1,59 @@
+\documentclass{article}
+
+\usepackage[lmargin=5cm,textwidth=15cm,marginparwidth=4cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{ragged2e}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{marginnote}
+\usetikzlibrary{calc}
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{framed}
+\usepackage{datetime}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+
+\reversemarginpar
+
+\newsavebox\mybox
+\newlength\BoxHt
+
+\newcommand\caution[2][-2.2\baselineskip]{%
+\begin{lrbox}{\mybox}
+\parbox{\marginparwidth}{#2}
+\end{lrbox}%
+\settoheight\BoxHt{\usebox\mybox}%
+\raisebox{\BoxHt}[0pt][0pt]{\marginnote{%
+  \begin{mdframed}[
+    userdefinedwidth=\marginparwidth,
+    innerleftmargin=3pt,
+    innerrightmargin=3pt,
+    linecolor=BrickRed,
+    frametitle=\colorbox{white}{\space Caution\space},
+    frametitlefont=\color{BrickRed}\sffamily,
+    innertopmargin=10pt,
+    frametitleaboveskip=-\ht\strutbox,
+    frametitlebelowskip=-\ht\strutbox,
+    frametitlealignment=\raggedright,
+    singleextra={\fill[BrickRed] let \p1=(P), \p2=(O)  in 
+    ( $ (P|-0,0.5*\y2+0.5*\y1) + (0,-4pt) $ ) -- +(4pt,4pt) -- +(0,8pt) -- cycle;}
+]\RaggedRight\small#2\end{mdframed}}[#1]}}
+
+
+\input{test_diary}
+
+
+\begin{document}
+
+\begin{diary}{}{14.07.2013}
+\lipsum*[3-4]\caution{\lipsum[2]}\lipsum[3-5]
+\end{diary}
+
+Some test text\caution{Some text goes here just to illustrate the command}
+
+\lipsum[4-5].\caution{Not forget to do this} This is a line that really needs some caution. But now it's time to move on to the next paragraph. \lipsum[1]
+
+\end{document}

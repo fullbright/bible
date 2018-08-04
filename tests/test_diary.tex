@@ -1,0 +1,12 @@
+\newcounter{diary}
+\renewcommand{\thediary}{\arabic{diary}}
+\newenvironment{diary}[2]
+{\par\medskip\refstepcounter{diary}%
+\hbox{%
+\fboxsep=\the\sidebar\hspace{-\envborder}\hspace{-.5\sidebar}%
+\colorbox{orange}{%
+\hspace{\envborder}\footnotesize\sffamily\bfseries%
+\textcolor{white}{{#1}\ {#2}\enspace\thediary\hspace{\envborder}}
+%\today % Print date in header of frame
+}}}{\vspace{0.5cm}}
+

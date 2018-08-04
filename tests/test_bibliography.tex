@@ -1,0 +1,50 @@
+%\documentclass{article}
+\documentclass{tufte-book}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+ 
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+%\usepackage{biblatex}
+\usepackage{lipsum}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+\usepackage{xspace}
+\usepackage{units}
+
+\addbibresource{mybibliography.bib}
+
+\title{Bibliography management: \texttt{biblatex} package}
+\author{Share\LaTeX}
+\date{ }
+ 
+\begin{document}
+ 
+\maketitle
+ 
+%\section{First section}
+ 
+%Using \texttt{biblatex} you can display bibliography divided into sections,
+%depending of citation type. 
+%Let's cite! The Einstein's journal paper \cite{einstein} and the Dirac's 
+%book \cite{dirac} are physics related items. 
+%Next, \textit{The \LaTeX\ Companion} book \cite{dirac}, the 
+%Donald Knuth's website \cite{knuthwebsite}, \textit{The Comprehensive 
+%Tex Archive Network} (CTAN) \cite{dirac} are \LaTeX\ related items; but 
+%the others Donald Knuth's items \cite{knuth-fa,knuth-acp} are dedicated 
+%to programming. 
+ 
+%\medskip
+
+Let's cite! The Einstein's journal paper \cite{einstein} and the Dirac's 
+book \cite{dirac} are physics related items. 
+
+\printbibliography[title={Whole bibliography}]
+\end{document}
