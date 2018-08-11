@@ -1,5 +1,6 @@
 HOST=127.0.0.1
 TEST_PATH=./
+PROJECTPATH=$PWD
 
 clean-pyc:
 	find . -name '*.pyc' -exec rm --force {} +
@@ -17,6 +18,10 @@ clean-build:
 install:
 	sudo apt-get install texlive-bibtex-extra biber
 
+build-tex:
+	cd $(PWD)/bible_fra; python xml2latex.py; cd ..;
+	pdflatex bible_fra_tufte.tex
+
 build:
 	echo "Compiling project $(project)"
 	pdflatex $(project).tex
@@ -32,6 +37,9 @@ lint:
 
 test: clean-pyc
 	py.test --verbose --color=yes $(TEST_PATH)
+
+test-makefile:
+	cat -e -t -v Makefile
 
 run:
 	python manage.py runserver
