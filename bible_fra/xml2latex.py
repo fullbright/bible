@@ -157,7 +157,7 @@ for book in books:
             versevotes = concordances.get_votes(segmentid)
 
             if(verseconcordances is not None):
-                sidenotes = "\\sidenote{ Concordance : %s (%s votes) }\r\n" % (verseconcordances, versevotes)
+                sidenotes = "\\defi{ Concordance : %s (%s votes) }\r\n" % (verseconcordances, versevotes)
                 print sidenotes
                 f.write(sidenotes)
 
