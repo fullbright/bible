@@ -1,6 +1,8 @@
 
 
+\usepackage{marginfix}
 \usepackage{xparse}
+\usepackage{zref-savepos,zref-abspage}
 
 \NewDocumentCommand{\LORD}{}{
   \textsc{Lord}\xspace
@@ -117,6 +119,41 @@
 }
 
 \ExplSyntaxOff
+
+\ExplSyntaxOn\makeatletter
+\int_new:N \g_tassio_note_int
+\seq_new:N\g_tassio_note_seq
+
+\newcommand{\defi}[1]{%
+  \int_gincr:N \g_tassio_note_int
+  \bool_if:nTF
+  {
+   \int_compare_p:n 
+    {
+     \zposy{tassionotepos\int_eval:n{\g_tassio_note_int}} 
+     =  
+     \zposy{tassionotepos\int_eval:n{\g_tassio_note_int +1}}
+    }
+   &&
+   \int_compare_p:n  
+   {
+    \zref@extractdefault { tassionotepage\int_eval:n{\g_tassio_note_int } }{abspage}{-1}
+    =
+    \zref@extractdefault { tassionotepage\int_eval:n{\g_tassio_note_int +1} }{abspage}{-1}
+   }
+  }
+   {
+    \seq_gput_left:Nn \g_tassio_note_seq {#1}
+   }
+   {
+    \seq_gput_left:Nn \g_tassio_note_seq {#1}
+    \marginnote{\tiny \seq_use:Nn \g_tassio_note_seq {,~}}%
+    \seq_gclear:N \g_tassio_note_seq
+   } 
+  \zref@label {tassionotepage\int_use:N\g_tassio_note_int}\zsaveposy {tassionotepos\int_use:N\g_tassio_note_int}
+  \emph{#1}}
+
+\ExplSyntaxOff\makeatother
 
 \newcommand{\SetVersion}[1]{\def\bibleversion{#1}}
 
