@@ -8,7 +8,10 @@ clean-pyc:
 	name '*~' -exec rm --force  {}
 	
 clean-tex:
-	for n in bible_fra/*.tex; do printf '%s\n' "$n"; done 
+	for n in bible_fra/*.tex; do printf '%s\n' "$n"; done
+	rm -i $(project).log; rm -i $(project).idx; rm -i $(project).lof; \
+	rm -i $(project).out; rm -i $(project).pdf; rm -i $(project).toc; \
+	rm -i $(project).aux; rm -i $(project).lot 
 
 clean-build:
 	rm --force --recursive build/
@@ -24,10 +27,10 @@ build-tex:
 
 build:
 	echo "Compiling project $(project)"
-	pdflatex $(project).tex
+	pdflatex -interaction=nonstopmode $(project).tex
 	biber $(project)
-	pdflatex $(project).tex
-	pdflatex $(project).tex
+	pdflatex -interaction=nonstopmode $(project).tex
+	pdflatex -interaction=nonstopmode $(project).tex
 
 isort:
 	sh -c "isort --skip-glob=.tox --recursive . "
