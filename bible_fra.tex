@@ -4,15 +4,82 @@
   ]{bible}
 
 \typesettrue
-
+\usepackage[top=2cm, bottom=1.3cm, left=5cm, right=0.5cm]{geometry}
+\usepackage[utf8]{inputenc}
 \usepackage{metalogo} % For Xe(La)TeX Logos
 
 \usepackage{microtype}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{marginnote}
+\usepackage{zref-savepos,zref-abspage}
+\usepackage{expl3}
 
+% Create a macro to group some information together in a margin note
+\ExplSyntaxOn\makeatletter
+\int_new:N \g_tassio_note_int
+\seq_new:N\g_tassio_note_seq
+
+\newcommand{\defi}[1]{%
+  \int_gincr:N \g_tassio_note_int
+  \bool_if:nTF
+  {
+%   \int_compare_p:n 
+%    {
+%     \zposy{tassionotepos\int_eval:n{\g_tassio_note_int}} 
+%     =  
+%     \zposy{tassionotepos\int_eval:n{\g_tassio_note_int +1}}
+%    }
+%   &&
+   \int_compare_p:n  
+   {
+    \zref@extractdefault { tassionotepage\int_eval:n{\g_tassio_note_int } }{abspage}{-1}
+    =
+    \zref@extractdefault { tassionotepage\int_eval:n{\g_tassio_note_int +1} }{abspage}{-1}
+   }
+  }
+   {
+    \seq_gput_left:Nn \g_tassio_note_seq {#1}
+   }
+   {
+    \seq_gput_left:Nn \g_tassio_note_seq {#1}
+    \marginnote{\tiny \seq_use:Nn \g_tassio_note_seq {,~}}%
+    \seq_gclear:N \g_tassio_note_seq
+   } 
+  %\zref@label {tassionotepage\int_use:N\g_tassio_note_int}\zsaveposy {tassionotepos\int_use:N\g_tassio_note_int}
+  %\emph{#1}
+}
+\ExplSyntaxOff\makeatother
+
+% Commands to set the header connectly.
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\fancyhf{} % clear the headers
+\fancyhead[R]{%
+   % We want italics
+   \itshape
+   % The chapter number only if it's greater than 0
+   \ifnum\value{chapter}>0 \chaptername\ \thechapter. \fi
+   % The chapter title
+   \leftmark}
+\fancyfoot[C]{\thepage}
+\fancypagestyle{plain}{
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+}
+\setlength{\headheight}{14.5pt}
+
+% Insert the date
 \def\today{July 29, 2018}
+
+% Set the title
 \title{La SainteBible}
 
 \renewcommand{\thefootnote}{\alph{footnote}}
+
+% Inserts a blank page
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
 
 \def\usecs#1{\csname#1\endcsname}
 
@@ -49,45 +116,45 @@
 
 %\Huge
 
-\inputbook{01_GEN}
-\inputbook{02_EXO}
-\inputbook{03_LEV}
-\inputbook{04_NUM}
-\inputbook{05_DEU}
-\inputbook{06_JOS}
-\inputbook{07_JDG}
-\inputbook{08_RUT}
-\inputbook{09_1SA}
-\inputbook{10_2SA}
-\inputbook{11_1KI}
-\inputbook{12_2KI}
-\inputbook{13_1CH}
-\inputbook{14_2CH}
-\inputbook{15_EZR}
-\inputbook{16_NEH}
-\inputbook{17_EST}
-\inputbook{18_JOB}
-\inputbook{19_PSA}
-\inputbook{20_PRO}
-\inputbook{21_ECC}
-\inputbook{22_SON}
-\inputbook{23_ISA}
-\inputbook{24_JER}
-\inputbook{25_LAM}
-\inputbook{26_EZE}
-\inputbook{27_DAN}
-\inputbook{28_HOS}
-\inputbook{29_JOE}
-\inputbook{30_AMO}
-\inputbook{31_OBA}
-\inputbook{32_JON}
-\inputbook{33_MIC}
-\inputbook{34_NAH}
-\inputbook{35_HAB}
-\inputbook{36_ZEP}
-\inputbook{37_HAG}
-\inputbook{38_ZEC}
-\inputbook{39_MAL}
+\inputbook{old/01_GEN}
+%\inputbook{old/02_EXO}
+%\inputbook{old/03_LEV}
+%\inputbook{old/04_NUM}
+%\inputbook{old/05_DEU}
+%\inputbook{old/06_JOS}
+%\inputbook{old/07_JDG}
+%\inputbook{old/08_RUT}
+%\inputbook{old/09_1SA}
+%\inputbook{old/10_2SA}
+%\inputbook{old/11_1KI}
+%\inputbook{old/12_2KI}
+%\inputbook{old/13_1CH}
+%\inputbook{old/14_2CH}
+%\inputbook{old/15_EZR}
+%\inputbook{old/16_NEH}
+%\inputbook{old/17_EST}
+%\inputbook{old/18_JOB}
+%\inputbook{old/19_PSA}
+%\inputbook{old/20_PRO}
+%\inputbook{old/21_ECC}
+%\inputbook{old/22_SON}
+%\inputbook{old/23_ISA}
+%\inputbook{old/24_JER}
+%\inputbook{old/25_LAM}
+%\inputbook{old/26_EZE}
+%\inputbook{old/27_DAN}
+%\inputbook{old/28_HOS}
+%\inputbook{old/29_JOE}
+%\inputbook{old/30_AMO}
+%\inputbook{old/31_OBA}
+%\inputbook{old/32_JON}
+%\inputbook{old/33_MIC}
+%\inputbook{old/34_NAH}
+%\inputbook{old/35_HAB}
+%\inputbook{old/36_ZEP}
+%\inputbook{old/37_HAG}
+%\inputbook{old/38_ZEC}
+%\inputbook{old/39_MAL}
 
 \onecolumn
 \thispagestyle{empty}
@@ -96,33 +163,33 @@
 \vfil
 \twocolumn
 
-\inputbook{40_MAT}
-\inputbook{41_MAR}
-\inputbook{42_LUK}
-\inputbook{43_JOH}
-\inputbook{44_ACT}
-\inputbook{45_ROM}
-\inputbook{46_1CO}
-\inputbook{47_2CO}
-\inputbook{48_GAL}
-\inputbook{49_EPH}
-\inputbook{50_PHI}
-\inputbook{51_COL}
-\inputbook{52_1TH}
-\inputbook{53_2TH}
-\inputbook{54_1TI}
-\inputbook{55_2TI}
-\inputbook{56_TIT}
-\inputbook{57_PHM}
-\inputbook{58_HEB}
-\inputbook{59_JAM}
-\inputbook{60_1PE}
-\inputbook{61_2PE}
-\inputbook{62_1JO}
-\inputbook{63_2JO}
-\inputbook{64_3JO}
-\inputbook{65_JUD}
-\inputbook{66_REV}
+\inputbook{new/40_MAT}
+%\inputbook{new/41_MAR}
+%\inputbook{new/42_LUK}
+%\inputbook{new/43_JOH}
+%\inputbook{new/44_ACT}
+%\inputbook{new/45_ROM}
+%\inputbook{new/46_1CO}
+%\inputbook{new/47_2CO}
+%\inputbook{new/48_GAL}
+%\inputbook{new/49_EPH}
+%\inputbook{new/50_PHI}
+%\inputbook{new/51_COL}
+%\inputbook{new/52_1TH}
+%\inputbook{new/53_2TH}
+%\inputbook{new/54_1TI}
+%\inputbook{new/55_2TI}
+%\inputbook{new/56_TIT}
+%\inputbook{new/57_PHM}
+%\inputbook{new/58_HEB}
+%\inputbook{new/59_JAM}
+%\inputbook{new/60_1PE}
+%\inputbook{new/61_2PE}
+%\inputbook{new/62_1JO}
+%\inputbook{new/63_2JO}
+%\inputbook{new/64_3JO}
+%\inputbook{new/65_JUD}
+%\inputbook{new/66_REV}
 
 
 \backmatter\onecolumn

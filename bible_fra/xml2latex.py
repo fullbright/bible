@@ -68,22 +68,45 @@ class ConcordancesConverter:
     class __ConcordancesConverter:
         versesdict = None
         votesdict = None
+	chapter_concordances = None
         # Write a constructor
         def __init__(self, arg):
             self.val = arg
             self.votesdict = {}
             self.versesdict = {}
+            self.chapter_concordances = {}
 
             # Load the verse id and the concordance into a dict
             with open(arg, mode='r') as infile:
                 reader = csv.reader(infile, delimiter='\t')
-                self.versesdict = dict((rows[0].lower(),rows[1]) for rows in reader)
+                #self.versesdict = dict((rows[0].lower(),rows[1]) for rows in reader)
+		for rows in reader:
+			verseid = rows[0].lower()
+
+			# Fill the concordances
+			verseconcordances = self.versesdict.get(verseid, [])
+			verseconcordances.append(rows[1])
+			self.versesdict.update({verseid : verseconcordances})
+
+			# Fill the votes
+			versevotes = self.votesdict.get(verseid, [])
+			versevotes.append(rows[2])
+			self.votesdict.update({verseid : versevotes})
+
+			# Fill the chapter concordances
+			chapterid = verseid[:-(len(verseid) - verseid.rfind('.'))]
+			chapterconcordances = self.chapter_concordances.get(chapterid, {})
+			chapter_verse_concordances = chapterconcordances.get(verseid, [])
+			chapter_verse_concordances.append(rows[1])
+			chapterconcordances.update({verseid: chapter_verse_concordances})
+			self.chapter_concordances.update({chapterid : chapterconcordances})
+
 
             # Load the verse id and the number of votes
-            with open(arg, mode='r') as infile:
-                # Load the book abreviation, shortname in a dictionary
-                reader = csv.reader(infile, delimiter='\t')
-                self.votesdict = dict((rows[0].lower(),rows[2]) for rows in reader)
+            #with open(arg, mode='r') as infile:
+            #    # Load the book abreviation, shortname in a dictionary
+            #    reader = csv.reader(infile, delimiter='\t')
+            #    self.votesdict = dict((rows[0].lower(),rows[2]) for rows in reader)
 
 
 
@@ -104,11 +127,17 @@ class ConcordancesConverter:
     def __getattr__(self, name):
         return getattr(self.instance, name)
 
-    def get_concordances(self, name):
-        return ConcordancesConverter.instance.versesdict.get(name)
+    def get_chapter_concordances(self, name):
+        #return ConcordancesConverter.instance.versesdict.get(name)
+	#return [key.startswith(name) for key in ConcordancesConverter.instance.versesdict]
+	return ConcordancesConverter.instance.chapter_concordances.get(name, [])
+
+    def get_verse_concordances(self, name):
+        return ConcordancesConverter.instance.versesdict.get(name, [])
+
 
     def get_votes(self, name):
-        return ConcordancesConverter.instance.votesdict.get(name)
+        return ConcordancesConverter.instance.votesdict.get(name, [])
 
 
 def bookId2Name(id):
@@ -147,17 +176,59 @@ for book in books:
     for chapter in chapters:
         chapid = chapter.get("id")
         print "\\chapter " + chapid
-        f.write("\r\n\\chapter\r\n")
+        #f.write("\r\n\\blankpage\r\n")
+        f.write("\r\n\\chapter{}\r\n")
+        f.write("\r\n\\chaptermark{"+ booklongname +"}{}\r\n")
+
+        # Get the concordances for this chapter
+	#chapterid_key = chapid.replace('b.', '').lower()
+        #chapter_concordances = concordances.get_chapter_concordances(chapterid_key)
+	#print chapterid_key, chapter_concordances
+        ## Generate a table to print the concordances
+        #f.write("\\begin{table}\r\n")
+        #f.write("\\centering\r\n")
+        #f.write("\\footnotesize\r\n")
+        #f.write("\\fontfamily{ppl}\selectfont\r\n")
+	#f.write("\\begin{center}\r\n")
+	#f.write("\\begin{tabular}{ cl }\r\n")
+
+        #f.write("\\toprule\r\n")
+	#f.write("Verset & Concordance\\\\\r\n")
+        #f.write("\\midrule\r\n")
+	#for key in chapter_concordances.keys():
+	#	#verseandconcordance = "%s & %s\\\\\r\n" % (key[0], key[1])
+	#	listofconcordances = chapter_concordances.get(key)
+
+	#	modulo = 1
+	#	joined_concordances = ""
+	#	for x in listofconcordances:
+	#		joined_concordances += str(x)
+	#		if (modulo % 5 == 0):
+	#			joined_concordances += "\\\\"
+	#		else:
+	#			joined_concordances += ", "
+	#		modulo += 1
+
+	#	#joined_concordances = ' \\\\'.join(str(x) for x in listofconcordances)
+	#	verseandconcordance = "%s & %s\\\\\r\n" % (key, joined_concordances)
+        #	f.write(verseandconcordance)
+        #	#f.write("\\hline\r\n")
+        #f.write("\\bottomrule\r\n")
+        #f.write("\\end{tabular}\r\n")
+        #f.write("\\end{center}\r\n")
+        #f.write("\\caption{Concordances pour le chapitre " + chapterid_key + "}\r\n")
+	#f.write("\\end{table}\r\n")
+
 
         segments = chapter.xpath("seg")
         for segment in segments:
             # Write the sidenotes
             segmentid = segment.get('id').replace("b.", "").lower()
-            verseconcordances = concordances.get_concordances(segmentid)
+            verseconcordances = concordances.get_verse_concordances(segmentid)
             versevotes = concordances.get_votes(segmentid)
 
-            if(verseconcordances is not None):
-                sidenotes = "\\defi{ Concordance : %s (%s votes) }\r\n" % (verseconcordances, versevotes)
+            if(verseconcordances is not None and len(verseconcordances) > 0):
+                sidenotes = "\\defi{ %s : %s }\r\n" % (segmentid, ", ".join(verseconcordances))
                 print sidenotes
                 f.write(sidenotes)
 

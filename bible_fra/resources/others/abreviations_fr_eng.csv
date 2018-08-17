@@ -1,73 +1,139 @@
-"Abbr11","Abbr12","Abbr1","Abbr2","Abbr3","Abbr4","NomLivre","NomLivreLower","DescriptionLivre","Abbr8","Testament1","Abbr10","Testament2"
-"Gn","gn","Ge","ge","Gen","gen","Genèse","genèse","Livre de la Genèse","Gn","OLD","GEN","OLD"
-"Ex","ex",,,,,"Exode","exode","Livre de l'Exode","Ex","OLD","EXO","OLD"
-"Lv","lv","Lév","lév",,,"Lévitique","lévitique","Lévitique","Lv","OLD","LEV","OLD"
-"Nb","nb","Nom","nom",,,"Nombres","nombres","Livre des Nombres","Nb","OLD","NUM","OLD"
-"Dt","dt","Deut","deut",,,"Deutéronome","deutéronome","Deutéronome","Dt","OLD","DEU","OLD"
-"Js","js","Jos","jos",,,"Josué","josué","Livre de Josué","Js","OLD","JOS","OLD"
-"Jg","jg","Jug","jug",,,"Juges","juges","Livre des Juges","Jg","OLD","JDG","OLD"
-"Rt","rt","Ru","ru",,,"Ruth","ruth","Livre de Ruth","Rt","OLD","RUT","OLD"
-"1S","1s","1 S","1 s",,,"1 Samuel","1 samuel","Premier livre de Samuel","1S","OLD","1SA","OLD"
-"2S","2s","2 S","2 s",,,"2 Samuel","2 samuel","Deuxième livre de Samuel","2S","OLD","2SA","OLD"
-"1R","1r","1 R","1 r",,,"1 Rois","1 rois","Premier livre des Rois","1R","OLD","1KI","OLD"
-"2R","2r","2 R","2 r",,,"2 Rois","2 rois","Deuxième livre des Rois","2R","OLD","2KI","OLD"
-"1Ch","1ch","1 Ch","1 ch",,,"1 Chroniques","1 chroniques","Premier livre des Chroniques","1Ch","OLD","1CH","OLD"
-"2Ch","2ch","2 Ch","2 ch",,,"2 Chroniques","2 chroniques","Deuxième livre des Chroniques","2Ch","OLD","2CH","OLD"
-"Esd","esd",,,,,"Esdras","esdras","Livre d'Esdras","Esd","OLD","EZR","OLD"
-"Ne","ne","Né","né",,,"Néhémie","néhémie","Livre de Néhémie","Ne","OLD","NEH","OLD"
-"Est","est",,,,,"Esther","esther","Livre d'Esther","Est","OLD","EST","OLD"
-"Jb","jb","Job","job",,,"Job","job","Livre de Job","Jb","OLD","JOB","OLD"
-"Ps","ps",,,,,"Psaumes","psaumes","Livre des Psaumes","Ps","OLD","PSA","OLD"
-"Pr","pr",,,,,"Proverbes","proverbes","Livre des Proverbes","Pr","OLD","PRO","OLD"
-"Ec","ec","Ecc","ecc",,,"Ecclésiaste","ecclésiaste","Ecclésiaste","Ec","OLD","ECC","OLD"
-"Ct","ct","Cant","cant","Cantique","cantique","Cantique des cantiques","cantique des cantiques","Cantique des cantiques","Ct","OLD","SON","OLD"
-"Es","es","És","és","Is","is","Ésaïe","ésaïe","Livre d'Isaïe","Es","OLD","ISA","OLD"
-"Jr","jr","Jé","jé",,,"Jérémie","jérémie","Livre de Jérémie","Jr","OLD","JER","OLD"
-"La","la","Lam","lam",,,"Lamentations","lamentations","Livre des Lamentations","La","OLD","LAM","OLD"
-"Ez","ez","Éz","éz",,,"Ézéchiel","ézéchiel","Livre d'Ézéchiel","Ez","OLD","EZE","OLD"
-"Da","da","Dn","dn",,,"Daniel","daniel","Livre de Daniel","Da","OLD","DAN","OLD"
-"Os","os",,,,,"Osée","osée","Livre d'Osée","Os","OLD","HOS","OLD"
-"Jl","jl","Joe","joe",,,"Joël","joël","Livre de Joël","Jl","OLD","JOE","OLD"
-"Am","am",,,,,"Amos","amos","Livre d'Amos","Am","OLD","AMO","OLD"
-"Ab","ab","Abd","abd",,,"Abdias","abdias","Livre d'Abdias","Ab","OLD","OBA","OLD"
-"Jon","jon",,,,,"Jonas","jonas","Livre de Jonas","Jon","OLD","JON","OLD"
-"Mi","mi",,,,,"Michée","michée","Livre de Michée","Mi","OLD","MIC","OLD"
-"Na","na","Nah","nah",,,"Nahum","nahum","Livre de Nahum","Na","OLD","NAH","OLD"
-"Ha","ha","Hab","hab",,,"Habakuk","habakuk","Livre de Habacuc","Ha","OLD","HAB","OLD"
-"So","so",,,,,"Sophonie","sophonie","Livre de Sophonie","So","OLD","ZEP","OLD"
-"Ag","ag","Agg","agg",,,"Aggée","aggée","Livre d'Aggée","Ag","OLD","HAG","OLD"
-"Za","za",,,,,"Zacharie","zacharie","Livre de Zacharie","Za","OLD","ZEC","OLD"
-"Ma","ma",,,,,"Malachie","malachie","Livre de Malachie","Ma","OLD","MAL","OLD"
-"1 M","1 m","1M","1m","1 Macchabées","1 macchabées","1Macchabées","1macchabées","Premier livre des Maccabées","1M","OLD","MAT","NEW"
-"2 M","2 m","2M","2m","2 Macchabées","2 macchabées","2Macchabées","2macchabées","Deuxième livre des Macchabées","2M","OLD","MAR","NEW"
-"Tb","tb","Tob","tob","Tobie","tobie",,,"Livre de Tobit","Tb","OLD","LUK","NEW"
-"Jdt","jdt","Judith","judith",,,,,"Livre de Judith","Jdt","OLD","JOH","NEW"
-"Sa","sa","Sg","sg",,,"Sagesse","sagesse","Livre de la Sagesse","Sg","OLD",,
-"Si","si",,,"Siracide","siracide","Ecclésiastique","ecclésiastique","Ecclésiastique ou Siracide","Si","OLD",,
-"Mt","mt","Mat","mat","Matt","matt","Matthieu","matthieu","Évangile selon Matthieu","Mt","NEW",,
-"Mc","mc","Mar","mar",,,"Marc","marc","Évangile selon Marc","Mc","NEW",,
-"Lc","lc",,,,,"Luc","luc","Évangile selon Luc","Lc","NEW",,
-"Jn","jn",,,,,"Jean","jean","Évangile selon Jean","Jn","NEW",,
-"Ac","ac","Act","act",,,"Actes","actes","Actes des Apôtres","Ac","NEW","ACT","NEW"
-"Rm","rm","Rom","rom","Ro","ro","Romains","romains","Épître aux Romains","Rm","NEW","ROM","NEW"
-"1Co","1co","1 Co","1 co","1 Cor","1 cor","1 Corinthiens","1 corinthiens","Première épître aux Corinthiens","1Co","NEW","1CO","NEW"
-"2Co","2co","2 Co","2 co","2 Cor","2 cor","2 Corinthiens","2 corinthiens","Deuxième épître aux Corinthiens","2Co","NEW","2CO","NEW"
-"Gal","gal","Ga","ga",,,"Galates","galates","Épître aux Galates","Ga","NEW","GAL","NEW"
-"Eph","eph","Ep","ep",,,"Éphésiens","éphésiens","Épître aux Éphésiens","Ep","NEW","EPH","NEW"
-"Ph","ph","Phil","phil",,,"Philippiens","philippiens","Épître aux Philippiens","Ph","NEW","PHI","NEW"
-"Col","col","Cl","cl","Co","co","Colossiens","colossiens","Épître aux Colossiens","Col","NEW","COL","NEW"
-"1Th","1th","1 Th","1 th","1 Thess","1 thess","1 Thessaloniciens","1 thessaloniciens","Première épître aux Thessaloniciens","1Th","NEW","1TH","NEW"
-"2Th","2th","2 Th","2 th","2 Thess","2 thess","2 Thessaloniciens","2 thessaloniciens","Deuxième épître aux Thessaloniciens","2Th","NEW","2TH","NEW"
-"1Ti","1ti","1 Ti","1 ti","1 Tm","1 tm","1 Timothée","1 timothée","Première épître à Timothée","1Ti","NEW","1TI","NEW"
-"2Ti","2ti","2 Ti","2 ti","2 Tm","2 tm","2 Timothée","2 timothée","Deuxième épître à Timothée","2Ti","NEW","2TI","NEW"
-"Tt","tt","Tit","tit",,,"Tite","tite","Épître à Tite","Tt","NEW","TIT","NEW"
-"Phm","phm",,,,,"Philémon","philémon","Épître à Philémon","Phm","NEW","PHM","NEW"
-"Hé","hé","He","he",,,"Hébreux","hébreux","Épître aux Hébreux","He","NEW","HEB","NEW"
-"Jc","jc","Jac","jac",,,"Jacques","jacques","Épître de Jacques","Jc","NEW","JAM","NEW"
-"1P","1p","1 P","1 p","1 Pi","1 pi","1 Pierre","1 pierre","Première épître de Pierre","1P","NEW","1PE","NEW"
-"2P","2p","2 P","2 p","2 Pi","2 pi","2 Pierre","2 pierre","Deuxième épître de Pierre","2P","NEW","2PE","NEW"
-"1Jn","1jn","1 Jn","1 jn",,,"1 Jean","1 jean","Première épître de Jean","1Jn","NEW","1JO","NEW"
-"2Jn","2jn","2 Jn","2 jn",,,"2 Jean","2 jean","Deuxième épître de Jean","2Jn","NEW","2JO","NEW"
-"3Jn","3jn","3 Jn","3 jn",,,"3 Jean","3 jean","Troisième épître de Jean","3Jn","NEW","3JO","NEW"
-"Jd","jd","Jud","jud",,,"Jude","jude","Épître de Jude","Jd","NEW","JUD","NEW"
-"Ap","ap",,,,,"Apocalypse","apocalypse","Apocalypse","Ap","NEW","REV","NEW"
+Abbr11,Abbr12,Abbr1,Abbr2,Abbr3,Abbr4,NomLivre,NomLivreLower,DescriptionLivre,Abbr8,Testament1,Abbr10,Testament2
+1 M,1 m,1M,1m,1 Macchabées,1 macchabées,1Macchabées,1macchabées,Premier livre des Maccabées,1M,OLD,MAT,NEW
+1Ch,1ch,1 Ch,1 ch,1 Chroniques,1 Chroniques,1 Chroniques,1 chroniques,Premier livre des Chroniques,1Ch,OLD,1CH,OLD
+1CH,1CH,1 Ch,1 ch,1 Chroniques,1 Chroniques,1 Chroniques,1 chroniques,Premier livre des Chroniques,1Ch,OLD,1CH,OLD
+1Co,1co,1 Co,1 co,1 Cor,1 cor,1 Corinthiens,1 corinthiens,Première épître aux Corinthiens,1Co,NEW,1CO,NEW
+1CO,1CO,1 Co,1 co,1 Cor,1 cor,1 Corinthiens,1 corinthiens,Première épître aux Corinthiens,1Co,NEW,1CO,NEW
+1Jn,1jn,1 Jn,1 jn,1 Jean,1 Jean,1 Jean,1 jean,Première épître de Jean,1Jn,NEW,1JO,NEW
+1JO,1JO,1 Jn,1 jn,1 Jean,1 Jean,1 Jean,1 jean,Première épître de Jean,1Jn,NEW,1JO,NEW
+1KI,1KI,1 R,1 r,,,1 Rois,1 rois,Premier livre des Rois,1R,OLD,1KI,OLD
+1P,1p,1 P,1 p,1 Pi,1 pi,1 Pierre,1 pierre,Première épître de Pierre,1P,NEW,1PE,NEW
+1PE,1PE,1 P,1 p,1 Pi,1 pi,1 Pierre,1 pierre,Première épître de Pierre,1P,NEW,1PE,NEW
+1R,1r,1 R,1 r,,,1 Rois,1 rois,Premier livre des Rois,1R,OLD,1KI,OLD
+1S,1s,1 S,1 s,,,1 Samuel,1 samuel,Premier livre de Samuel,1S,OLD,1SA,OLD
+1SA,1SA,1 S,1 s,,,1 Samuel,1 samuel,Premier livre de Samuel,1S,OLD,1SA,OLD
+1Th,1th,1 Th,1 th,1 Thess,1 thess,1 Thessaloniciens,1 thessaloniciens,Première épître aux Thessaloniciens,1Th,NEW,1TH,NEW
+1TH,1TH,1 Th,1 th,1 Thess,1 thess,1 Thessaloniciens,1 thessaloniciens,Première épître aux Thessaloniciens,1Th,NEW,1TH,NEW
+1Ti,1ti,1 Ti,1 ti,1 Tm,1 tm,1 Timothée,1 timothée,Première épître à Timothée,1Ti,NEW,1TI,NEW
+1TI,1TI,1 Ti,1 ti,1 Tm,1 tm,1 Timothée,1 timothée,Première épître à Timothée,1Ti,NEW,1TI,NEW
+2 M,2 m,2M,2m,2 Macchabées,2 macchabées,2Macchabées,2macchabées,Deuxième livre des Macchabées,2M,OLD,MAR,NEW
+2Ch,2ch,2 Ch,2 ch,,,2 Chroniques,2 chroniques,Deuxième livre des Chroniques,2Ch,OLD,2CH,OLD
+2CH,2CH,2 Ch,2 ch,,,2 Chroniques,2 chroniques,Deuxième livre des Chroniques,2Ch,OLD,2CH,OLD
+2Co,2co,2 Co,2 co,2 Cor,2 cor,2 Corinthiens,2 corinthiens,Deuxième épître aux Corinthiens,2Co,NEW,2CO,NEW
+2CO,2CO,2 Co,2 co,2 Cor,2 cor,2 Corinthiens,2 corinthiens,Deuxième épître aux Corinthiens,2Co,NEW,2CO,NEW
+2Jn,2jn,2 Jn,2 jn,,,2 Jean,2 jean,Deuxième épître de Jean,2Jn,NEW,2JO,NEW
+2JO,2JO,2 Jn,2 jn,,,2 Jean,2 jean,Deuxième épître de Jean,2Jn,NEW,2JO,NEW
+2KI,2KI,1 R,1 r,,,1 Rois,1 rois,Premier livre des Rois,1R,OLD,1KI,OLD
+2P,2p,2 P,2 p,2 Pi,2 pi,2 Pierre,2 pierre,Deuxième épître de Pierre,2P,NEW,2PE,NEW
+2PE,2PE,2 P,2 p,2 Pi,2 pi,2 Pierre,2 pierre,Deuxième épître de Pierre,2P,NEW,2PE,NEW
+2R,2r,2 R,2 r,,,2 Rois,2 rois,Deuxième livre des Rois,2R,OLD,2KI,OLD
+2S,2s,2 S,2 s,,,2 Samuel,2 samuel,Deuxième livre de Samuel,2S,OLD,2SA,OLD
+2SA,2SA,2 S,2 s,,,2 Samuel,2 samuel,Deuxième livre de Samuel,2S,OLD,2SA,OLD
+2Th,2th,2 Th,2 th,2 Thess,2 thess,2 Thessaloniciens,2 thessaloniciens,Deuxième épître aux Thessaloniciens,2Th,NEW,2TH,NEW
+2TH,2TH,2 Th,2 th,2 Thess,2 thess,2 Thessaloniciens,2 thessaloniciens,Deuxième épître aux Thessaloniciens,2Th,NEW,2TH,NEW
+2Ti,2ti,2 Ti,2 ti,2 Tm,2 tm,2 Timothée,2 timothée,Deuxième épître à Timothée,2Ti,NEW,2TI,NEW
+2TI,2TI,2 Ti,2 ti,2 Tm,2 tm,2 Timothée,2 timothée,Deuxième épître à Timothée,2Ti,NEW,2TI,NEW
+3Jn,3jn,3 Jn,3 jn,,,3 Jean,3 jean,Troisième épître de Jean,3Jn,NEW,3JO,NEW
+3JO,3JO,3 Jn,3 jn,,,3 Jean,3 jean,Troisième épître de Jean,3Jn,NEW,3JO,NEW
+Ab,ab,Abd,abd,,,Abdias,abdias,Livre d'Abdias,Ab,OLD,OBA,OLD
+Ac,ac,Act,act,,,Actes,actes,Actes des Apôtres,Ac,NEW,ACT,NEW
+ACT,ACT,Act,act,,,Actes,actes,Actes des Apôtres,Ac,NEW,ACT,NEW
+Ag,ag,Agg,agg,,,Aggée,aggée,Livre d'Aggée,Ag,OLD,HAG,OLD
+Am,am,,,,,Amos,amos,Livre d'Amos,Am,OLD,AMO,OLD
+AMO,AMO,,,,,Amos,amos,Livre d'Amos,Am,OLD,AMO,OLD
+Ap,ap,,,,,Apocalypse,apocalypse,Apocalypse,Ap,NEW,REV,NEW
+Col,col,Cl,cl,Co,co,Colossiens,colossiens,Épître aux Colossiens,Col,NEW,COL,NEW
+COL,COL,Cl,cl,Co,co,Colossiens,colossiens,Épître aux Colossiens,Col,NEW,COL,NEW
+Ct,ct,Cant,cant,Cantique,cantique,Cantique des cantiques,cantique des cantiques,Cantique des cantiques,Ct,OLD,SON,OLD
+Da,da,Dn,dn,,,Daniel,daniel,Livre de Daniel,Da,OLD,DAN,OLD
+DAN,DAN,Dn,dn,,,Daniel,daniel,Livre de Daniel,Da,OLD,DAN,OLD
+DEU,DEU,Deut,deut,,,Deutéronome,deutéronome,Deutéronome,Dt,OLD,DEU,OLD
+Dt,dt,Deut,deut,,,Deutéronome,deutéronome,Deutéronome,Dt,OLD,DEU,OLD
+Ec,ec,Ecc,ecc,,,Ecclésiaste,ecclésiaste,Ecclésiaste,Ec,OLD,ECC,OLD
+ECC,ECC,Ecc,ecc,,,Ecclésiaste,ecclésiaste,Ecclésiaste,Ec,OLD,ECC,OLD
+Eph,eph,Ep,ep,,,Éphésiens,éphésiens,Épître aux Éphésiens,Ep,NEW,EPH,NEW
+EPH,EPH,Ep,ep,,,Éphésiens,éphésiens,Épître aux Éphésiens,Ep,NEW,EPH,NEW
+Es,es,És,és,Is,is,Ésaïe,ésaïe,Livre d'Esaïe,Es,OLD,ISA,OLD
+Esd,esd,,,,,Esdras,esdras,Livre d'Esdras,Esd,OLD,EZR,OLD
+Est,est,,,,,Esther,esther,Livre d'Esther,Est,OLD,EST,OLD
+EST,EST,,,,,Esther,esther,Livre d'Esther,Est,OLD,EST,OLD
+Ex,ex,,,,,Exode,exode,Livre de l'Exode,Ex,OLD,EXO,OLD
+EXO,EXO,,,,,Exode,exode,Livre de l'Exode,Ex,OLD,EXO,OLD
+Ez,ez,Éz,éz,,,Ézéchiel,ézéchiel,Livre d'Ézéchiel,Ez,OLD,EZE,OLD
+EZE,EZE,Éz,éz,,,Ézéchiel,ézéchiel,Livre d'Ézéchiel,Ez,OLD,EZE,OLD
+EZR,EZR,,,,,Esdras,esdras,Livre d'Esdras,Esd,OLD,EZR,OLD
+Gal,gal,Ga,ga,,,Galates,galates,Épître aux Galates,Ga,NEW,GAL,NEW
+GAL,GAL,Ga,ga,,,Galates,galates,Épître aux Galates,Ga,NEW,GAL,NEW
+GEN,GEN,Ge,ge,Gen,gen,Genèse,genèse,Livre de la Genèse,Gn,OLD,GEN,OLD
+Gn,gn,Ge,ge,Gen,gen,Genèse,genèse,Livre de la Genèse,Gn,OLD,GEN,OLD
+Ha,ha,Hab,hab,,,Habakuk,habakuk,Livre de Habacuc,Ha,OLD,HAB,OLD
+HAB,HAB,Hab,hab,,,Habakuk,habakuk,Livre de Habacuc,Ha,OLD,HAB,OLD
+HAG,HAG,Agg,agg,,,Aggée,aggée,Livre d'Aggée,Ag,OLD,HAG,OLD
+Hé,hé,He,he,,,Hébreux,hébreux,Épître aux Hébreux,He,NEW,HEB,NEW
+HEB,HEB,He,he,,,Hébreux,hébreux,Épître aux Hébreux,He,NEW,HEB,NEW
+HOS,HOS,,,,,Osée,osée,Livre d'Osée,Os,OLD,HOS,OLD
+ISA,ISA,És,és,Is,is,Ésaïe,ésaïe,Livre d'Isaïe,Es,OLD,ISA,OLD
+JAM,JAM,Jac,jac,,,Jacques,jacques,Épître de Jacques,Jc,NEW,JAM,NEW
+Jb,jb,Job,job,,,Job,job,Livre de Job,Jb,OLD,JOB,OLD
+Jc,jc,Jac,jac,,,Jacques,jacques,Épître de Jacques,Jc,NEW,JAM,NEW
+Jd,jd,Jud,jud,,,Jude,jude,Épître de Jude,Jd,NEW,JUD,NEW
+JDG,JDG,Jug,jug,,,Juges,juges,Livre des Juges,Jg,OLD,JDG,OLD
+Jdt,jdt,Judith,judith,,,,,Livre de Judith,Jdt,OLD,,
+JER,JER,Jé,jé,,,Jérémie,jérémie,Livre de Jérémie,Jr,OLD,JER,OLD
+Jg,jg,Jug,jug,,,Juges,juges,Livre des Juges,Jg,OLD,JDG,OLD
+Jl,jl,Joe,joe,,,Joël,joël,Livre de Joël,Jl,OLD,JOE,OLD
+Jn,jn,,,,,Jean,jean,Évangile selon Jean,Jn,NEW,JOH,NEW
+JOB,JOB,Job,job,,,Job,job,Livre de Job,Jb,OLD,JOB,OLD
+JOE,JOE,Joe,joe,,,Joël,joël,Livre de Joël,Jl,OLD,JOE,OLD
+JOH,JOH,,,,,Jean,jean,Évangile selon Jean,Jn,NEW,JOH,NEW
+Jon,jon,,,,,Jonas,jonas,Livre de Jonas,Jon,OLD,JON,OLD
+JON,JON,,,,,Jonas,jonas,Livre de Jonas,Jon,OLD,JON,OLD
+JOS,JOS,Jos,jos,,,Josué,josué,Livre de Josué,Js,OLD,JOS,OLD
+Jr,jr,Jé,jé,,,Jérémie,jérémie,Livre de Jérémie,Jr,OLD,JER,OLD
+Js,js,Jos,jos,,,Josué,josué,Livre de Josué,Js,OLD,JOS,OLD
+JUD,JUD,Jud,jud,,,Jude,jude,Épître de Jude,Jd,NEW,JUD,NEW
+La,la,Lam,lam,,,Lamentations,lamentations,Livre des Lamentations,La,OLD,LAM,OLD
+LAM,LAM,Lam,lam,,,Lamentations,lamentations,Livre des Lamentations,La,OLD,LAM,OLD
+Lc,lc,,,,,Luc,luc,Évangile selon Luc,Lc,NEW,LUK,NEW
+LEV,LEV,Lév,lév,,,Lévitique,lévitique,Lévitique,Lv,OLD,LEV,OLD
+LUK,LUK,,,,,Luc,luc,Évangile selon Luc,Lc,NEW,LUK,NEW
+Lv,lv,Lév,lév,,,Lévitique,lévitique,Lévitique,Lv,OLD,LEV,OLD
+Ma,ma,,,,,Malachie,malachie,Livre de Malachie,Ma,OLD,MAL,OLD
+MAL,MAL,,,,,Malachie,malachie,Livre de Malachie,Ma,OLD,MAL,OLD
+MAR,MAR,Mar,mar,,,Marc,marc,Évangile selon Marc,Mc,NEW,MAR,NEW
+MAT,MAT,Mat,mat,Matt,matt,Matthieu,matthieu,Évangile selon Matthieu,Mt,NEW,MAT,NEW
+Mc,mc,Mar,mar,,,Marc,marc,Évangile selon Marc,Mc,NEW,MAR,NEW
+Mi,mi,,,,,Michée,michée,Livre de Michée,Mi,OLD,MIC,OLD
+MIC,MIC,,,,,Michée,michée,Livre de Michée,Mi,OLD,MIC,OLD
+Mt,mt,Mat,mat,Matt,matt,Matthieu,matthieu,Évangile selon Matthieu,Mt,NEW,MAT,NEW
+Na,na,Nah,nah,,,Nahum,nahum,Livre de Nahum,Na,OLD,NAH,OLD
+NAH,NAH,Nah,nah,,,Nahum,nahum,Livre de Nahum,Na,OLD,NAH,OLD
+Nb,nb,Nom,nom,,,Nombres,nombres,Livre des Nombres,Nb,OLD,NUM,OLD
+Ne,ne,Né,né,,,Néhémie,néhémie,Livre de Néhémie,Ne,OLD,NEH,OLD
+NEH,NEH,Né,né,,,Néhémie,néhémie,Livre de Néhémie,Ne,OLD,NEH,OLD
+NUM,NUM,Nom,nom,,,Nombres,nombres,Livre des Nombres,Nb,OLD,NUM,OLD
+OBA,OBA,Abd,abd,,,Abdias,abdias,Livre d'Abdias,Ab,OLD,OBA,OLD
+Os,os,,,,,Osée,osée,Livre d'Osée,Os,OLD,HOS,OLD
+Ph,ph,Phil,phil,,,Philippiens,philippiens,Épître aux Philippiens,Ph,NEW,PHI,NEW
+PHI,PHI,Phil,phil,,,Philippiens,philippiens,Épître aux Philippiens,Ph,NEW,PHI,NEW
+Phm,phm,,,,,Philémon,philémon,Épître à Philémon,Phm,NEW,PHM,NEW
+PHM,PHM,,,,,Philémon,philémon,Épître à Philémon,Phm,NEW,PHM,NEW
+Pr,pr,,,,,Proverbes,proverbes,Livre des Proverbes,Pr,OLD,PRO,OLD
+PRO,PRO,,,,,Proverbes,proverbes,Livre des Proverbes,Pr,OLD,PRO,OLD
+Ps,ps,,,,,Psaumes,psaumes,Livre des Psaumes,Ps,OLD,PSA,OLD
+PSA,PSA,,,,,Psaumes,psaumes,Livre des Psaumes,Ps,OLD,PSA,OLD
+REV,REV,,,,,Apocalypse,apocalypse,Apocalypse,Ap,NEW,REV,NEW
+Rm,rm,Rom,rom,Ro,ro,Romains,romains,Épître aux Romains,Rm,NEW,ROM,NEW
+ROM,ROM,Rom,rom,Ro,ro,Romains,romains,Épître aux Romains,Rm,NEW,ROM,NEW
+Rt,rt,Ru,ru,,,Ruth,ruth,Livre de Ruth,Rt,OLD,RUT,OLD
+RUT,RUT,Ru,ru,,,Ruth,ruth,Livre de Ruth,Rt,OLD,RUT,OLD
+Sa,sa,Sg,sg,,,Sagesse,sagesse,Livre de la Sagesse,Sg,OLD,,
+Si,si,,,Siracide,siracide,Ecclésiastique,ecclésiastique,Ecclésiastique ou Siracide,Si,OLD,,
+So,so,,,,,Sophonie,sophonie,Livre de Sophonie,So,OLD,ZEP,OLD
+SON,SON,Cant,cant,Cantique,cantique,Cantique des cantiques,cantique des cantiques,Cantique des cantiques,Ct,OLD,SON,OLD
+Tb,tb,Tob,tob,Tobie,tobie,,Tobit,Livre de Tobit,Tb,OLD,,
+TIT,TIT,Tit,tit,,,Tite,tite,Épître à Tite,Tt,NEW,TIT,NEW
+Tt,tt,Tit,tit,,,Tite,tite,Épître à Tite,Tt,NEW,TIT,NEW
+Za,za,,,,,Zacharie,zacharie,Livre de Zacharie,Za,OLD,ZEC,OLD
+ZEC,ZEC,,,,,Zacharie,zacharie,Livre de Zacharie,Za,OLD,ZEC,OLD
+ZEP,ZEP,,,,,Sophonie,sophonie,Livre de Sophonie,So,OLD,ZEP,OLD
