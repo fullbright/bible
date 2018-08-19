@@ -177,7 +177,7 @@ for book in books:
         chapid = chapter.get("id")
         print "\\chapter " + chapid
         #f.write("\r\n\\blankpage\r\n")
-        f.write("\r\n\\chapter{}\r\n")
+        f.write("\r\n\\chapter["+ booklongname +"]\r\n")
         f.write("\r\n\\chaptermark{"+ booklongname +"}{}\r\n")
 
         # Get the concordances for this chapter
@@ -227,12 +227,12 @@ for book in books:
             verseconcordances = concordances.get_verse_concordances(segmentid)
             versevotes = concordances.get_votes(segmentid)
 
+            f.write("\\verse %s \r\n" % segment.text.encode('utf8').strip())
+
             if(verseconcordances is not None and len(verseconcordances) > 0):
-                sidenotes = "\\defi{ %s : %s }\r\n" % (segmentid, ", ".join(verseconcordances))
+                sidenotes = "\\defi{ \\\\ \\textcolor{blue}{ %s :} \\textcolor{gray}{%s} }\r\n" % (segmentid, ", ".join(verseconcordances))
                 print sidenotes
                 f.write(sidenotes)
-
-            f.write("\\verse %s \r\n" % segment.text.encode('utf8').strip())
 
     print "This book is finished. closing the %s file." % bookfilename
     # Close the book file
