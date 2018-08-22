@@ -165,12 +165,12 @@
    {
     %\seq_gput_left:Nn \g_tassio_note_seq {#1}
     \seq_gput_right:Nn \g_tassio_note_seq {#1}
-    \sidenote{CONCORDANCES\\ \tiny \g_tassio_note_int \seq_use:Nn \g_tassio_note_seq {,~}}%
+    \marginnote{CONCORDANCES\\ \tiny \g_tassio_note_int \seq_use:Nn \g_tassio_note_seq {,~}}%
     \seq_gclear:N \g_tassio_note_seq
    } 
   \zref@label {tassionotepage\int_use:N\g_tassio_note_int}
   \zsaveposy {tassionotepos\int_use:N\g_tassio_note_int}
-  \emph{#1}
+  %\emph{#1}
 }
 \ExplSyntaxOff\makeatother
 
