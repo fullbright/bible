@@ -22,8 +22,8 @@
 %%
 % Book metadata
 \title{La Sainte Bible\thanks{Merci au Seigneur Jésus-Christ pour Son sacrifice à la croix.}}
-\author[The Tufte-LaTeX Developers]{The Tufte-LaTeX\ Developers}
-\publisher{Publisher of This Book}
+\author[Toutes les paroles de ce livre sont inspirées de Dieu.]{Toute la gloire revient à Dieu.}
+\publisher{Sergio Afanou}
 
 %%
 % If they're installed, use Bergamo and Chantilly from www.fontsite.com.
@@ -163,23 +163,25 @@
 \makeindex
 
 \SetVersion{bible_fra}
+
 \begin{document}
 
 % Front matter
 \frontmatter
 
-\newpage
-\begin{fullwidth}
 % front pages and epigraphs
 \inputbook{frontpages}
 
 % r.3 full title page
 \maketitle
 
-\inputbook{copyright}
-\inputbook{license}
+\newpage
 
-\par\textit{First printing, \monthyear}
+\begin{fullwidth}
+    \inputbook{copyright}
+    \inputbook{license}
+
+    \par\textit{First printing, \monthyear}
 \end{fullwidth}
 
 % r.5 contents
@@ -191,8 +193,8 @@
 
 \inputbook{dedication}
 
-\inputbook{introduction}
-
+% r.9 introduction
+\cleardoublepage
 
 %%
 % Start the main matter (normal chapters)
