@@ -21,8 +21,17 @@ clean-build:
 install:
 	sudo apt-get install texlive-bibtex-extra biber
 
-build-tex:
+generate-books:
 	cd $(PWD)/bible_fra; python xml2latex.py; cd ..;
+	
+
+build-pdf-dev:
+	for i in `seq 1 10`; do pdflatex -interaction=nonstopmode  bible_fra_tufte.tex ; done;
+
+build-pdf-prd:
+	for i in `seq 1 10`; do pdflatex -interaction=nonstopmode  bible_fra_tufte_full.tex ; done;
+
+build-tex: generate-books
 	pdflatex bible_fra_tufte.tex
 
 build:
