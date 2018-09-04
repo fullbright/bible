@@ -5,7 +5,7 @@ before_install:
   texlive-latex-extra texlive-fonts-extra texlive-latex-base dvipng texlive-latex-recommended texlive-bibtex-extra biber
 script:
 - mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build bible_fra_tufte.tex
+- pdflatex -interaction=nonstopmode -output-directory _build bible_fra_tufte.tex
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build bible_fra_tufte_full.tex
 deploy:
   provider: releases
