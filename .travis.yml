@@ -1,0 +1,16 @@
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+script:
+- mkdir _build
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build bible_fra_tufte_full.tex
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build bible_fra_tufte_full.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: VWDDR0VphXfc7X5JElC8P2+1PfUL8OVPnCl+fZKJV49RUx52XNnBljKBkEL5CSHuaHUBBlhTetQInLBS4FTPZaXWOJZFgIZTmquYyfj2vVqY3+EcwVzdhn+pJuyZoHmieF4ygYkJo9aNKbvq5bGCATs2W8555WcJVdH2EGd8VpFCyKn2U9FHAYuaEDR0sDxW7oIpZeEKSfPu5KXlK4swZnE2JO7k7VUEKCqAJT/u+DV6Va6UUPeCQOJz2+k/yb5pjmNEOh7QXykNHuDjNcivYso3MINpK3I1F3Ju/RMLRug8joc+rXvMXXQCZfUDRz9j3h4XsnN7MTNlXOd/sRJtDRuX8LSsT+75EFebJCv/lhWd2Is3dbP6xX/recb01Ki3R+Tm8dzzB4nIuHM+3ekVXp0GhwI0R/+pChIvhES3zZrHrRZ/CQL6A7x3Aail7F1YZbbYXeGx0E+FBuYO4jpVDeCHLrvgd0E2OtXeCFmTUaiEygp4Qy4w3IRJpYrr4ppofB4SHZltphIxbTopl0RWdt1tCXpQGT2T4a5xc2rTuHBfdxukCla/yjw8Ht0nUh4nKQ099Wg0wrL6MH9PlhHAaOorY2RBAXVgfjILiSK5lcRNwDyYlnAiLgvqk7hWV0KyLeinQexEacjcScEj4HoCiavQQeCZUITZLKxDbFPg2y4=
+  file: _build/bible_fra_tufte_full.pdf
+  on:
+    repo: fullbright/bible
