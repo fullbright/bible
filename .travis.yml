@@ -1,5 +1,5 @@
 sudo: required
-dist: trusty
+dist: xenial
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
   texlive-latex-extra texlive-fonts-extra texlive-latex-base dvipng texlive-latex-recommended texlive-bibtex-extra biber
