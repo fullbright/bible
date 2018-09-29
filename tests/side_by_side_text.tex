@@ -1,0 +1,36 @@
+\documentclass[varwidth]{standalone}
+
+\usepackage{xparse}
+
+% Two minipages side by side
+% Provide the size of each minipage with two optional arguments
+% First one defaults to .50 and second argument defaults to value of the first
+\NewDocumentEnvironment{sidebyside}{O{.50} o +m +m}{%
+  \noindent\begin{minipage}[t][][t]{#1\linewidth}%
+  #3% Content of the first minipage
+  \end{minipage}%
+  \hfill%
+  \noindent\begin{minipage}[t][][t]{\IfValueTF{#2}{#2}{#1}\linewidth}%
+  #4% Content of the second minipage
+  \end{minipage}\\% newline is important, it allows \hfill to work correctly, try removing it ;)
+}
+
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[english]{babel}
+\usepackage[pangram]{blindtext}
+
+\begin{document}
+  \sidebyside{\Blindtext[1][3]}{\noindent\color{Cerulean}\Blindtext[1][3]}
+
+  \vspace{1cm}
+
+  \sidebyside[.40]{\Blindtext[1][3]}{\noindent\color{Cerulean}\Blindtext[1][3]}
+
+  \vspace{1cm}
+
+  \sidebyside[.30][.70]{\Blindtext[1][3]}{\noindent\color{Cerulean}\Blindtext[1][3]}
+
+  \vspace{1cm}
+
+  \sidebyside[.30][.65]{\Blindtext[1][3]}{\noindent\color{Cerulean}\Blindtext[1][3]}
+\end{document}
