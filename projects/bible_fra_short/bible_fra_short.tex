@@ -10,6 +10,8 @@
 \usepackage{geometry}
 \usepackage{marginnote}
 \usepackage{microtype}
+%\usepackage[pdfpagelabels]{hyperref}
+\usepackage[plainpages=false,pdfpagelabels]{hyperref}
 
 \def\today{July 29, 2018}
 \title{La SainteBible}
@@ -51,10 +53,11 @@
 
 %\Huge
 
+%\hypersetup{pageanchor=false}
 \inputbook{01_GEN}
 \inputbook{38_ZEC}
 \inputbook{39_MAL}
-
+%\hypersetup{pageanchor=true}
 \onecolumn
 \thispagestyle{empty}
 \null\vfil
@@ -62,10 +65,11 @@
 \vfil
 \twocolumn
 
+%\hypersetup{pageanchor=false}
 \inputbook{40_MAT}
 \inputbook{65_JUD}
 \inputbook{66_REV}
-
+%\hypersetup{pageanchor=true}
 
 \backmatter\onecolumn
 % Need to make single column

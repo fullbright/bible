@@ -67,6 +67,10 @@
 \usepackage{xspace}
 
 %%
+% Disable the warnings on the verse ref duplicate
+%\usepackage[plainpages=false,pdfpagelabels]{hyperref}
+
+%%
 % Some shortcuts for Tufte's book titles.  The lowercase commands will
 % produce the initials of the book title in italics.  The all-caps commands
 % will print out the full title of the book in italics.
@@ -202,6 +206,7 @@
 \mainmatter
 
 
+\hypersetup{pageanchor=false}
 \inputbook{old/01_GEN}
 %\inputbook{old/02_EXO}
 %\inputbook{old/03_LEV}
@@ -241,6 +246,7 @@
 %\inputbook{old/37_HAG}
 %\inputbook{old/38_ZEC}
 %\inputbook{old/39_MAL}
+\hypersetup{pageanchor=true}
 
 \onecolumn
 \thispagestyle{empty}
@@ -249,7 +255,8 @@
 \vfil
 %\twocolumn
 
-\inputbook{new/40_MAT}
+\hypersetup{pageanchor=false}
+%\inputbook{new/40_MAT}
 %\inputbook{new/41_MAR}
 %\inputbook{new/42_LUK}
 %\inputbook{new/43_JOH}
@@ -276,6 +283,7 @@
 %\inputbook{new/64_3JO}
 %\inputbook{new/65_JUD}
 %\inputbook{new/66_REV}
+\hypersetup{pageanchor=true}
 
 
 \onecolumn
