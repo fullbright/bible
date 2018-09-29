@@ -41,6 +41,9 @@ build:
 	pdflatex -interaction=nonstopmode $(project).tex
 	pdflatex -interaction=nonstopmode $(project).tex
 
+extract_cross_ref:
+	grep -oP '^[0-9a-zA-Z]{3,4}' bible_fra/resources/others/cross_references.txt | uniq > bible_fra/resources/others/uniq_book_shortcodes.txt
+
 isort:
 	sh -c "isort --skip-glob=.tox --recursive . "
 
