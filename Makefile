@@ -3,9 +3,9 @@ TEST_PATH=./
 PROJECTPATH=$PWD
 
 clean-pyc:
-	find . -name '*.pyc' -exec rm --force {} +
-	find . -name '*.pyo' -exec rm --force {} +
-	name '*~' -exec rm --force  {}
+	find . -name 'processors/*.pyc' -exec rm --force {} +
+	find . -name 'processors/*.pyo' -exec rm --force {} +
+	name 'processors/*~' -exec rm --force  {}
 	
 clean-tex:
 	for n in bible_fra/*.tex; do printf '%s\n' "$n"; done
