@@ -1,7 +1,7 @@
 *.el
 *~
 \#*\#
-*.pdf
+#*.pdf
 *.out
 *.log
 *.aux
