@@ -59,12 +59,14 @@ test-makefile:
 run:
 	python manage.py runserver
 
-docker-run:
-	docker build \
-      --file=./Dockerfile \
-      --tag=my_project ./
+docker-run: docker-build
 	docker run \
       --detach=false \
-      --name=my_project \
+      --name=bible-builder \
       --publish=$(HOST):8080 \
-      my_project
+      fullbright/bible-builder
+
+docker-build:
+	docker build \
+      --file=./Dockerfile \
+      --tag=fullbright/bible-builder ./

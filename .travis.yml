@@ -1,13 +1,20 @@
 sudo: required
 dist: xenial
 language: python
+services:
+- docker
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
   texlive-latex-extra texlive-fonts-extra texlive-latex-base dvipng texlive-latex-recommended texlive-bibtex-extra biber
+- docker pull fullbright/bible-builder
+- docker ps -a
+
 script:
 - mkdir _build
+- docker run -v $TRAVIS_BUILD_DIR:/myApp:rw fullbright/ionic /bin/sh -c "cd /myApp; ./build-bible.sh"
 - pdflatex -interaction=nonstopmode -output-directory _build bible_fra_tufte.tex >> generate_bible_fra.log
 - pdflatex -interaction=nonstopmode -output-directory _build bible_fra_tufte_full.tex >> generate_bible_fra_full.log
+
 deploy:
   provider: releases
   api_key:
